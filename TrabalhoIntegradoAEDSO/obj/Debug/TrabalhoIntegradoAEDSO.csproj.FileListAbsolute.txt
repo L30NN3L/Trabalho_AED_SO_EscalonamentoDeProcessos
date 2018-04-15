@@ -1,0 +1,7 @@
+C:\Users\Hugo Leonel\source\repos\TrabalhoIntegradoAEDSO\TrabalhoIntegradoAEDSO\bin\Debug\TrabalhoIntegradoAEDSO.exe.config
+C:\Users\Hugo Leonel\source\repos\TrabalhoIntegradoAEDSO\TrabalhoIntegradoAEDSO\bin\Debug\TrabalhoIntegradoAEDSO.exe
+C:\Users\Hugo Leonel\source\repos\TrabalhoIntegradoAEDSO\TrabalhoIntegradoAEDSO\bin\Debug\TrabalhoIntegradoAEDSO.pdb
+C:\Users\Hugo Leonel\source\repos\TrabalhoIntegradoAEDSO\TrabalhoIntegradoAEDSO\obj\Debug\TrabalhoIntegradoAEDSO.csprojResolveAssemblyReference.cache
+C:\Users\Hugo Leonel\source\repos\TrabalhoIntegradoAEDSO\TrabalhoIntegradoAEDSO\obj\Debug\TrabalhoIntegradoAEDSO.csproj.CoreCompileInputs.cache
+C:\Users\Hugo Leonel\source\repos\TrabalhoIntegradoAEDSO\TrabalhoIntegradoAEDSO\obj\Debug\TrabalhoIntegradoAEDSO.exe
+C:\Users\Hugo Leonel\source\repos\TrabalhoIntegradoAEDSO\TrabalhoIntegradoAEDSO\obj\Debug\TrabalhoIntegradoAEDSO.pdb
