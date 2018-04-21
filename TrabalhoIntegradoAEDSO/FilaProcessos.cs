@@ -14,7 +14,9 @@ namespace TrabalhoIntegradoAEDSO
 
         private Processo primeiro, ultimo;
 
-        public int Count { get => count; set => count = value; }
+        
+
+        //  public int Count { get => count; set => count = value; }
 
         public FilaProcessos(int prioridade)
         {
@@ -69,6 +71,19 @@ namespace TrabalhoIntegradoAEDSO
             {
                 aux.ImprimeProcesso();
                 aux = aux.Proximo;
+            }
+        }
+
+        public int Count
+        {
+            get
+            {
+                return count;
+            }
+
+            set
+            {
+                count = value;
             }
         }
 

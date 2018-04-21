@@ -18,13 +18,15 @@ namespace TrabalhoIntegradoAEDSO
 
         private Processo proximo;
 
-        public int Prioridade { get => prioridade; set => prioridade = value; }
-        public float Tempo { get => tempo; set => tempo = value; }
-        public int Ciclos { get => ciclos; set => ciclos = value; }
-        public string Status { get => status; set => status = value; }
+       
 
-        internal Processo Proximo { get => proximo; set => proximo = value; }
-        
+        //public int Prioridade { get => prioridade; set => prioridade = value; }
+        //public float Tempo { get => tempo; set => tempo = value; }
+        //public int Ciclos { get => ciclos; set => ciclos = value; }
+        //public string Status { get => status; set => status = value; }
+
+        //internal Processo Proximo { get => proximo; set => proximo = value; }
+
 
         public Processo(int id, string nome, int prioridade, float tempo, int ciclos)
         {
@@ -46,6 +48,73 @@ namespace TrabalhoIntegradoAEDSO
             Console.WriteLine("Id: {0} \nNome: {1} \nPrioridade: {2} \nTempo: {3} \nCiclos: {4} \n", 
                 this.id, this.nome, this.Prioridade, this.Tempo, this.Ciclos);
         }
+
+
+        public int Prioridade
+        {
+            get
+            {
+                return prioridade;
+            }
+
+            set
+            {
+                prioridade = value;
+            }
+        }
+
+        public float Tempo
+        {
+            get
+            {
+                return tempo;
+            }
+
+            set
+            {
+                tempo = value;
+            }
+        }
+
+        public int Ciclos
+        {
+            get
+            {
+                return ciclos;
+            }
+
+            set
+            {
+                ciclos = value;
+            }
+        }
+
+        public string Status
+        {
+            get
+            {
+                return status;
+            }
+
+            set
+            {
+                status = value;
+            }
+        }
+
+        public Processo Proximo
+        {
+            get
+            {
+                return proximo;
+            }
+
+            set
+            {
+                proximo = value;
+            }
+        }
+
 
     }
 }
