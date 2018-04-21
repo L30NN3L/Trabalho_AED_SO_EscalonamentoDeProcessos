@@ -37,6 +37,8 @@ namespace TrabalhoIntegradoAEDSO
             // Escalonador inicia seu algoritmo de escalonamento
             escalonador.AlgoritmoEscalonamento();
 
+            Console.ForegroundColor = ConsoleColor.Yellow;
+
             //objeto termina observação de desempenho do código
             sw.Stop();
 

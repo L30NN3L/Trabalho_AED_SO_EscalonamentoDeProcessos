@@ -16,7 +16,9 @@ namespace TrabalhoIntegradoAEDSO
         private FilaProcessos[] filas;
 
         public FilaProcessos[] Filas { get => filas; set => filas = value; }
-        
+
+        private static int controlCor = 0;
+
         public void AlgoritmoEscalonamento()
         {
             // Enquanto existir processos em qualquer fila, será executado este bloco
@@ -79,6 +81,9 @@ namespace TrabalhoIntegradoAEDSO
 
         private void Executar(Processo paraExecutar)
         {
+
+            controlCor++;
+
             // Se o processo ainda tiver ciclos e tiver tempo para ser processado....
             if(paraExecutar.Ciclos > 0 && paraExecutar.Tempo > 0)
             {
@@ -90,7 +95,18 @@ namespace TrabalhoIntegradoAEDSO
 
                 // para determinar uma quantidade de vezes para ser processado através dos ciclos
                 long numFor = tamanhoProcesso / this.execucao.Ciclos;
-                
+
+                if(controlCor % 2 == 0)
+                {
+                    Console.ForegroundColor = ConsoleColor.Green;
+                }
+                else
+                {
+                    Console.ForegroundColor = ConsoleColor.DarkGreen;
+                }
+
+                this.execucao.ImprimeProcesso();
+
                 // para cada iteração, o tempo de processamento em um processo diminuirá 1 millisegundo
                 for (int i = 0; i < numFor; i++)
                 {
@@ -100,14 +116,16 @@ namespace TrabalhoIntegradoAEDSO
                         Thread.Sleep(1); // para millisegundo...
                         this.execucao.Tempo -= 0.001f; // é decrementado o tempo de processamento do processo
                       //  Console.Clear();
-                        this.execucao.ImprimeProcesso(); // os processos são impressos no Console para avaliar desempenho
+                       // this.execucao.ImprimeProcesso(); // os processos são impressos no Console para avaliar desempenho
                     }
                     else { return;  }
                 }
 
                 this.execucao.Ciclos--; // após o laço de iterações de processamento... 
                                         // o processo perde numero de ciclos por cada visita
-                                        
+
+                this.execucao.ImprimeProcesso();
+
                 if (this.execucao.Ciclos > 0) //se o processo ainda tiver ciclos...
                 {
                     //o processo retorna á sua fila de pronto
@@ -115,6 +133,7 @@ namespace TrabalhoIntegradoAEDSO
                 }
                 else
                 {
+                    Console.ForegroundColor = ConsoleColor.Red;
                     // senão ele é apenas impresso no console
                     this.execucao.ImprimeProcesso();
                 }
